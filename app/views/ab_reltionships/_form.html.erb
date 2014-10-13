@@ -1,0 +1,29 @@
+<%= form_for(@ab_reltionship) do |f| %>
+  <% if @ab_reltionship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ab_reltionship.errors.count, "error") %> prohibited this ab_reltionship from being saved:</h2>
+
+      <ul>
+      <% @ab_reltionship.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abmaster_id %><br>
+    <%= f.number_field :abmaster_id %>
+  </div>
+  <div class="field">
+    <%= f.label :relatedto_id %><br>
+    <%= f.number_field :relatedto_id %>
+  </div>
+  <div class="field">
+    <%= f.label :relationtype %><br>
+    <%= f.text_field :relationtype %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

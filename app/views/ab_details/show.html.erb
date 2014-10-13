@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Abmaster:</strong>
+  <%= @ab_detail.abmaster_id %>
+</p>
+
+<p>
+  <strong>Effectivedate:</strong>
+  <%= @ab_detail.effectivedate %>
+</p>
+
+<p>
+  <strong>Addressline1:</strong>
+  <%= @ab_detail.addressline1 %>
+</p>
+
+<p>
+  <strong>Addressline2:</strong>
+  <%= @ab_detail.addressline2 %>
+</p>
+
+<p>
+  <strong>Addressline3:</strong>
+  <%= @ab_detail.addressline3 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @ab_detail.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @ab_detail.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @ab_detail.zipcode %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @ab_detail.country %>
+</p>
+
+<p>
+  <strong>Invalid:</strong>
+  <%= @ab_detail.invalid %>
+</p>
+
+<%= link_to 'Edit', edit_ab_detail_path(@ab_detail) %> |
+<%= link_to 'Back', ab_details_path %>

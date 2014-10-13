@@ -1,0 +1,2 @@
+module AbRelationshipsHelper
+end

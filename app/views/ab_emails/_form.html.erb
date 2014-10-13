@@ -1,0 +1,41 @@
+<%= form_for(@ab_email) do |f| %>
+  <% if @ab_email.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ab_email.errors.count, "error") %> prohibited this ab_email from being saved:</h2>
+
+      <ul>
+      <% @ab_email.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abmaster_id %><br>
+    <%= f.number_field :abmaster_id %>
+  </div>
+  <div class="field">
+    <%= f.label :effectivedate %><br>
+    <%= f.date_select :effectivedate %>
+  </div>
+  <div class="field">
+    <%= f.label :emailtype %><br>
+    <%= f.text_field :emailtype %>
+  </div>
+  <div class="field">
+    <%= f.label :emailid %><br>
+    <%= f.text_field :emailid %>
+  </div>
+  <div class="field">
+    <%= f.label :preferred %><br>
+    <%= f.check_box :preferred %>
+  </div>
+  <div class="field">
+    <%= f.label :invalid %><br>
+    <%= f.check_box :invalid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

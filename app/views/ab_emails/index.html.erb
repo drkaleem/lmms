@@ -1,0 +1,37 @@
+<h1>Listing ab_emails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abmaster</th>
+      <th>Effectivedate</th>
+      <th>Emailtype</th>
+      <th>Emailid</th>
+      <th>Preferred</th>
+      <th>Invalid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ab_emails.each do |ab_email| %>
+      <tr>
+        <td><%= ab_email.abmaster_id %></td>
+        <td><%= ab_email.effectivedate %></td>
+        <td><%= ab_email.emailtype %></td>
+        <td><%= ab_email.emailid %></td>
+        <td><%= ab_email.preferred %></td>
+        <td><%= ab_email.invalid %></td>
+        <td><%= link_to 'Show', ab_email %></td>
+        <td><%= link_to 'Edit', edit_ab_email_path(ab_email) %></td>
+        <td><%= link_to 'Destroy', ab_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ab email', new_ab_email_path %>

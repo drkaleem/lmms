@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Abmaster:</strong>
+  <%= @ab_relationship.abmaster_id %>
+</p>
+
+<p>
+  <strong>Relatedto:</strong>
+  <%= @ab_relationship.relatedto_id %>
+</p>
+
+<p>
+  <strong>Relationtype:</strong>
+  <%= @ab_relationship.relationtype %>
+</p>
+
+<%= link_to 'Edit', edit_ab_relationship_path(@ab_relationship) %> |
+<%= link_to 'Back', ab_relationships_path %>

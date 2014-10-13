@@ -1,0 +1,31 @@
+<h1>Listing ab_reltionships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abmaster</th>
+      <th>Relatedto</th>
+      <th>Relationtype</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ab_reltionships.each do |ab_reltionship| %>
+      <tr>
+        <td><%= ab_reltionship.abmaster_id %></td>
+        <td><%= ab_reltionship.relatedto_id %></td>
+        <td><%= ab_reltionship.relationtype %></td>
+        <td><%= link_to 'Show', ab_reltionship %></td>
+        <td><%= link_to 'Edit', edit_ab_reltionship_path(ab_reltionship) %></td>
+        <td><%= link_to 'Destroy', ab_reltionship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ab reltionship', new_ab_reltionship_path %>

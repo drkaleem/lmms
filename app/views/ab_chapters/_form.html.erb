@@ -1,0 +1,33 @@
+<%= form_for(@ab_chapter) do |f| %>
+  <% if @ab_chapter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ab_chapter.errors.count, "error") %> prohibited this ab_chapter from being saved:</h2>
+
+      <ul>
+      <% @ab_chapter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abmaster_id %><br>
+    <%= f.number_field :abmaster_id %>
+  </div>
+  <div class="field">
+    <%= f.label :effectivedate %><br>
+    <%= f.date_select :effectivedate %>
+  </div>
+  <div class="field">
+    <%= f.label :chapter %><br>
+    <%= f.text_field :chapter %>
+  </div>
+  <div class="field">
+    <%= f.label :subchapter %><br>
+    <%= f.text_field :subchapter %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

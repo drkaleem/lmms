@@ -1,0 +1,45 @@
+<h1>Listing ab_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abmaster</th>
+      <th>Effectivedate</th>
+      <th>Addressline1</th>
+      <th>Addressline2</th>
+      <th>Addressline3</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zipcode</th>
+      <th>Country</th>
+      <th>Invalid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ab_details.each do |ab_detail| %>
+      <tr>
+        <td><%= ab_detail.abmaster_id %></td>
+        <td><%= ab_detail.effectivedate %></td>
+        <td><%= ab_detail.addressline1 %></td>
+        <td><%= ab_detail.addressline2 %></td>
+        <td><%= ab_detail.addressline3 %></td>
+        <td><%= ab_detail.city %></td>
+        <td><%= ab_detail.state %></td>
+        <td><%= ab_detail.zipcode %></td>
+        <td><%= ab_detail.country %></td>
+        <td><%= ab_detail.invalid %></td>
+        <td><%= link_to 'Show', ab_detail %></td>
+        <td><%= link_to 'Edit', edit_ab_detail_path(ab_detail) %></td>
+        <td><%= link_to 'Destroy', ab_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ab detail', new_ab_detail_path %>

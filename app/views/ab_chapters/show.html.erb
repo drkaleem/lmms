@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Abmaster:</strong>
+  <%= @ab_chapter.abmaster_id %>
+</p>
+
+<p>
+  <strong>Effectivedate:</strong>
+  <%= @ab_chapter.effectivedate %>
+</p>
+
+<p>
+  <strong>Chapter:</strong>
+  <%= @ab_chapter.chapter %>
+</p>
+
+<p>
+  <strong>Subchapter:</strong>
+  <%= @ab_chapter.subchapter %>
+</p>
+
+<%= link_to 'Edit', edit_ab_chapter_path(@ab_chapter) %> |
+<%= link_to 'Back', ab_chapters_path %>

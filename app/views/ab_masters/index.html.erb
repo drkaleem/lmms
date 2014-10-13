@@ -1,0 +1,49 @@
+<h1>Listing ab_masters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Membercode</th>
+      <th>Salutation</th>
+      <th>Firstname</th>
+      <th>Middlename</th>
+      <th>Lastname</th>
+      <th>Type</th>
+      <th>Dob</th>
+      <th>Group</th>
+      <th>Subgroup1</th>
+      <th>Subgroup2</th>
+      <th>Inactive</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ab_masters.each do |ab_master| %>
+      <tr>
+        <td><%= ab_master.membercode %></td>
+        <td><%= ab_master.salutation %></td>
+        <td><%= ab_master.firstname %></td>
+        <td><%= ab_master.middlename %></td>
+        <td><%= ab_master.lastname %></td>
+        <td><%= ab_master.type %></td>
+        <td><%= ab_master.dob %></td>
+        <td><%= ab_master.group %></td>
+        <td><%= ab_master.subgroup1 %></td>
+        <td><%= ab_master.subgroup2 %></td>
+        <td><%= ab_master.inactive %></td>
+        <td><%= ab_master.status %></td>
+        <td><%= link_to 'Show', ab_master %></td>
+        <td><%= link_to 'Edit', edit_ab_master_path(ab_master) %></td>
+        <td><%= link_to 'Destroy', ab_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ab master', new_ab_master_path %>
