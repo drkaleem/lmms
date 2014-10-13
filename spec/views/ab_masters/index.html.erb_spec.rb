@@ -9,7 +9,7 @@ describe "ab_masters/index" do
         :firstname => "Firstname",
         :middlename => "Middlename",
         :lastname => "Lastname",
-        :type => "Type",
+        :addresstype => "Addresstype",
         :group => "Group",
         :subgroup1 => "Subgroup1",
         :subgroup2 => "Subgroup2",
@@ -22,7 +22,7 @@ describe "ab_masters/index" do
         :firstname => "Firstname",
         :middlename => "Middlename",
         :lastname => "Lastname",
-        :type => "Type",
+        :addresstype => "Addresstype",
         :group => "Group",
         :subgroup1 => "Subgroup1",
         :subgroup2 => "Subgroup2",
@@ -40,7 +40,7 @@ describe "ab_masters/index" do
     assert_select "tr>td", :text => "Firstname".to_s, :count => 2
     assert_select "tr>td", :text => "Middlename".to_s, :count => 2
     assert_select "tr>td", :text => "Lastname".to_s, :count => 2
-    assert_select "tr>td", :text => "Type".to_s, :count => 2
+    assert_select "tr>td", :text => "Addresstype".to_s, :count => 2
     assert_select "tr>td", :text => "Group".to_s, :count => 2
     assert_select "tr>td", :text => "Subgroup1".to_s, :count => 2
     assert_select "tr>td", :text => "Subgroup2".to_s, :count => 2

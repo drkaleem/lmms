@@ -69,6 +69,6 @@ class AbMastersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ab_master_params
-      params.require(:ab_master).permit(:membercode, :salutation, :firstname, :middlename, :lastname, :type, :dob, :group, :subgroup1, :subgroup2, :inactive, :status)
+      params.require(:ab_master).permit(:membercode, :salutation, :firstname, :middlename, :lastname, :addresstype, :dob, :group, :subgroup1, :subgroup2, :inactive, :status)
     end
 end

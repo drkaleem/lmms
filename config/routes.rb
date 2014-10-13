@@ -1,4 +1,6 @@
 Lmms::Application.routes.draw do
+  resources :ab_masters
+
   resources :ab_relationships
 
   resources :ab_masters

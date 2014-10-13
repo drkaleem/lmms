@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013193548) do
+ActiveRecord::Schema.define(version: 20141013213551) do
 
   create_table "ab_chapters", force: true do |t|
     t.integer  "abmaster_id"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20141013193548) do
     t.string   "firstname"
     t.string   "middlename"
     t.string   "lastname"
-    t.string   "type"
+    t.string   "addresstype"
     t.date     "dob"
     t.string   "group"
     t.string   "subgroup1"

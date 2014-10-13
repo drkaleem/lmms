@@ -8,7 +8,7 @@ describe "ab_masters/new" do
       :firstname => "MyString",
       :middlename => "MyString",
       :lastname => "MyString",
-      :type => "",
+      :addresstype => "MyString",
       :group => "MyString",
       :subgroup1 => "MyString",
       :subgroup2 => "MyString",
@@ -27,7 +27,7 @@ describe "ab_masters/new" do
       assert_select "input#ab_master_firstname[name=?]", "ab_master[firstname]"
       assert_select "input#ab_master_middlename[name=?]", "ab_master[middlename]"
       assert_select "input#ab_master_lastname[name=?]", "ab_master[lastname]"
-      assert_select "input#ab_master_type[name=?]", "ab_master[type]"
+      assert_select "input#ab_master_addresstype[name=?]", "ab_master[addresstype]"
       assert_select "input#ab_master_group[name=?]", "ab_master[group]"
       assert_select "input#ab_master_subgroup1[name=?]", "ab_master[subgroup1]"
       assert_select "input#ab_master_subgroup2[name=?]", "ab_master[subgroup2]"

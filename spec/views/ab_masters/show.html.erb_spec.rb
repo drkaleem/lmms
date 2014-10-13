@@ -8,7 +8,7 @@ describe "ab_masters/show" do
       :firstname => "Firstname",
       :middlename => "Middlename",
       :lastname => "Lastname",
-      :type => "Type",
+      :addresstype => "Addresstype",
       :group => "Group",
       :subgroup1 => "Subgroup1",
       :subgroup2 => "Subgroup2",
@@ -25,7 +25,7 @@ describe "ab_masters/show" do
     rendered.should match(/Firstname/)
     rendered.should match(/Middlename/)
     rendered.should match(/Lastname/)
-    rendered.should match(/Type/)
+    rendered.should match(/Addresstype/)
     rendered.should match(/Group/)
     rendered.should match(/Subgroup1/)
     rendered.should match(/Subgroup2/)
