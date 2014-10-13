@@ -1,0 +1,2 @@
+module AbDetailsHelper
+end

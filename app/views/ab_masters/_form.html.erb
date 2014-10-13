@@ -1,0 +1,65 @@
+<%= form_for(@ab_master) do |f| %>
+  <% if @ab_master.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ab_master.errors.count, "error") %> prohibited this ab_master from being saved:</h2>
+
+      <ul>
+      <% @ab_master.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :membercode %><br>
+    <%= f.number_field :membercode %>
+  </div>
+  <div class="field">
+    <%= f.label :salutation %><br>
+    <%= f.text_field :salutation %>
+  </div>
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :middlename %><br>
+    <%= f.text_field :middlename %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %><br>
+    <%= f.date_select :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :group %><br>
+    <%= f.text_field :group %>
+  </div>
+  <div class="field">
+    <%= f.label :subgroup1 %><br>
+    <%= f.text_field :subgroup1 %>
+  </div>
+  <div class="field">
+    <%= f.label :subgroup2 %><br>
+    <%= f.text_field :subgroup2 %>
+  </div>
+  <div class="field">
+    <%= f.label :inactive %><br>
+    <%= f.check_box :inactive %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Listing ab_chapters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abmaster</th>
+      <th>Effectivedate</th>
+      <th>Chapter</th>
+      <th>Subchapter</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ab_chapters.each do |ab_chapter| %>
+      <tr>
+        <td><%= ab_chapter.abmaster_id %></td>
+        <td><%= ab_chapter.effectivedate %></td>
+        <td><%= ab_chapter.chapter %></td>
+        <td><%= ab_chapter.subchapter %></td>
+        <td><%= link_to 'Show', ab_chapter %></td>
+        <td><%= link_to 'Edit', edit_ab_chapter_path(ab_chapter) %></td>
+        <td><%= link_to 'Destroy', ab_chapter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ab chapter', new_ab_chapter_path %>

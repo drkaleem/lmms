@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Abmaster:</strong>
+  <%= @ab_email.abmaster_id %>
+</p>
+
+<p>
+  <strong>Effectivedate:</strong>
+  <%= @ab_email.effectivedate %>
+</p>
+
+<p>
+  <strong>Emailtype:</strong>
+  <%= @ab_email.emailtype %>
+</p>
+
+<p>
+  <strong>Emailid:</strong>
+  <%= @ab_email.emailid %>
+</p>
+
+<p>
+  <strong>Preferred:</strong>
+  <%= @ab_email.preferred %>
+</p>
+
+<p>
+  <strong>Invalid:</strong>
+  <%= @ab_email.invalid %>
+</p>
+
+<%= link_to 'Edit', edit_ab_email_path(@ab_email) %> |
+<%= link_to 'Back', ab_emails_path %>

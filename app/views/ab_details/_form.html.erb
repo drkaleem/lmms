@@ -1,0 +1,57 @@
+<%= form_for(@ab_detail) do |f| %>
+  <% if @ab_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ab_detail.errors.count, "error") %> prohibited this ab_detail from being saved:</h2>
+
+      <ul>
+      <% @ab_detail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abmaster_id %><br>
+    <%= f.number_field :abmaster_id %>
+  </div>
+  <div class="field">
+    <%= f.label :effectivedate %><br>
+    <%= f.date_select :effectivedate %>
+  </div>
+  <div class="field">
+    <%= f.label :addressline1 %><br>
+    <%= f.text_field :addressline1 %>
+  </div>
+  <div class="field">
+    <%= f.label :addressline2 %><br>
+    <%= f.text_field :addressline2 %>
+  </div>
+  <div class="field">
+    <%= f.label :addressline3 %><br>
+    <%= f.text_field :addressline3 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.number_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :invalid %><br>
+    <%= f.check_box :invalid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

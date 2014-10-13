@@ -1,4 +1,18 @@
 Lmms::Application.routes.draw do
+  resources :ab_relationships
+
+  resources :ab_masters
+
+  resources :ab_reltionships
+
+  resources :ab_emails
+
+  resources :ab_phones
+
+  resources :ab_details
+
+  resources :ab_chapters
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

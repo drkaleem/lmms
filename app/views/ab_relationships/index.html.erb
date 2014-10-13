@@ -1,0 +1,31 @@
+<h1>Listing ab_relationships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Abmaster</th>
+      <th>Relatedto</th>
+      <th>Relationtype</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ab_relationships.each do |ab_relationship| %>
+      <tr>
+        <td><%= ab_relationship.abmaster_id %></td>
+        <td><%= ab_relationship.relatedto_id %></td>
+        <td><%= ab_relationship.relationtype %></td>
+        <td><%= link_to 'Show', ab_relationship %></td>
+        <td><%= link_to 'Edit', edit_ab_relationship_path(ab_relationship) %></td>
+        <td><%= link_to 'Destroy', ab_relationship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ab relationship', new_ab_relationship_path %>
